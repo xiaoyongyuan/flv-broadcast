@@ -1,0 +1,74 @@
+*{
+    color: #fff;
+}
+.overview{
+    width: 96%;
+    height: 98%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 18px;
+}
+.overview .left{
+    width: 48%;
+    height: 100%;
+    background: url("../imgs/modelBg.png") no-repeat;
+    background-size: 100% 100%;
+    margin-right: 16px;
+}
+.overview .statistics{
+    height: 22%;
+}
+.overview .map{
+    width: 100%;
+    height: 74%;
+    margin: 0 auto;
+    background: url("../imgs/mapBg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.overview .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.overview .rightTop{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+.overview .rightTopLeft,.rightTopRight{
+    width:50%;
+    height: 100%;
+    background: url("../imgs/modelBg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.overview .rightTopLeftChart,.rightTopRightChart{
+    width:100%;
+    height: 90%;
+}
+.overview .rightTopRight{
+    margin-left: 16px;
+}
+.overview .rightBottom{
+    width: 100%;
+    height: 60%;
+    background: url("../imgs/modelBg.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 16px;
+}
+.overview .title {
+    width: 90%;
+    height: 40px;
+    display: flex;
+}
+.overview .titleName{
+    color:#01c3ff;
+}
+.overview .titleCircle{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color:#01c3ff;
+    border-radius: 50%;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script src="./js/flv.min.js"></script>
+<div id="main"></div>
+<script>
+    let videoList=[];
+    //创建多个video
+    createVideo();
+    function createVideo() {
+        let videoHtml="";
+        for(let i=1;i<=6;i++){
+            videoHtml+=`<video id="videoElement${i}" controls width="520" height="240" style="margin:10px"></video>`;
+            videoList.push({id:"videoElement"+i,address:"http://192.168.1.124:8080/live?port=1935&app=flvapp&stream=flvtest"+i});
+        }
+        let main=document.getElementById("main");
+        main.innerHTML=videoHtml;
+    }
+    //视频直播方法
+    function liveVideo(item) {
+        var videoElement = document.getElementById(item.id);
+        var flvPlayer = flvjs.createPlayer({
+            type: 'flv',
+            url: item.address
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }
+    videoList.map((v)=>{
+        liveVideo(v)
+    });
+</script>
+</body>
+</html>
